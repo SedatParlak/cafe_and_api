@@ -1,0 +1,184 @@
+{
+	"info": {
+		"_postman_id": "b9869e29-0596-4c12-a4f2-8fb87f92ec86",
+		"name": "Cafe and Wifi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Cafe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Random Cafe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/random",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Cafes by Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/search?location=Peckham",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "location",
+							"value": "Peckham"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Cafe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name\n",
+							"value": "Sedat",
+							"type": "text"
+						},
+						{
+							"key": "map_url",
+							"value": "https://goo.gl/maps/gYX271NxyuawiMcK8",
+							"type": "text"
+						},
+						{
+							"key": "img_url",
+							"value": "www.google.com",
+							"type": "text"
+						},
+						{
+							"key": "location",
+							"value": "Turkey",
+							"type": "text"
+						},
+						{
+							"key": "has_sockets",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_toilet",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "has_wifi",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "can_take_calls",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "seats",
+							"value": "25",
+							"type": "text"
+						},
+						{
+							"key": "coffee_price",
+							"value": "25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Caffe Price",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cafe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "?api-key=12345678",
+					"query": [
+						{
+							"key": "api-key",
+							"value": "12345678"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
